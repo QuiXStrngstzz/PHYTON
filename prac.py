@@ -1,35 +1,38 @@
-def sum(num1,num2):
-    return num1 + num2
+add = lambda NUM1, NUM2: NUM1 + NUM2
 
-def sub(num1,num2):
-    return num1 - num2
+mul = lambda NUM1, NUM2: NUM1 * NUM2
 
-def mul(num1,num2):
-    return num1 * num2
+div = lambda NUM1, NUM2: NUM1 // NUM2
 
-def div(num1,num2):
-    return num1 // num2
+diff = lambda NUM1, NUM2: NUM1 - NUM2
 
 def main():
-    print("CALCULATOR")
-    print("----------")
-    
-    num1     = int(input())
-    operator = str(input())
-    num2     = int(input())
-    
-    match operator:
-        case "+":
-            print(sum(num1,num2))
-            
-        case "-":
-            print(sub(num1,num2))
-            
-        case "x":
-            print(mul(num1,num2))
-            
-        case "/":
-            print(div(num1,num2))
-            
-if __name__ == "__main__":
+    while True:
+        input_str = input()
+        values = input_str.split()
+        
+        num1 = int (values[0])
+        op   = values[1]
+        num2 = int (values[2])
+        
+        match op:
+            case "+":
+                print("=",add(num1, num2))
+
+            case "-":
+                print("=",diff(num1, num2))
+                
+            case "x":
+                print("=",mul(num1, num2))
+
+            case "/":
+                print("=",div(num1, num2))
+                
+if __name__== "__main__":
     main()
+    
+
+
+                
+                
+        
